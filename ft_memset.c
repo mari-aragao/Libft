@@ -6,7 +6,7 @@
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 00:26:25 by maragao           #+#    #+#             */
-/*   Updated: 2022/05/05 01:00:40 by maragao          ###   ########.rio      */
+/*   Updated: 2022/05/05 13:31:44 by maragao          ###   ########.rio      */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memset(void *s, int c, size_t n)
 {
-	size_t		i;
+	size_t			i;
 	unsigned char	*str;
 
 	i = 0;

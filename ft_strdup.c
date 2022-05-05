@@ -6,7 +6,7 @@
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 23:01:24 by maragao           #+#    #+#             */
-/*   Updated: 2022/05/04 21:55:31 by maragao          ###   ########.rio      */
+/*   Updated: 2022/05/05 12:39:53 by maragao          ###   ########.rio      */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,5 @@ char	*ft_strdup(const char *s)
 		i++;
 	}
 	ptr[i] = 0;
-	return (ptr) download
+	return (ptr);
 }
