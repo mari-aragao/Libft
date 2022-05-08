@@ -6,7 +6,7 @@
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 12:19:35 by maragao           #+#    #+#             */
-/*   Updated: 2022/05/05 17:45:43 by maragao          ###   ########.rio      */
+/*   Updated: 2022/05/08 02:02:50 by maragao          ###   ########.rio      */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
+#include <strings.h>
 
 int	main(void)
 {
@@ -59,7 +60,7 @@ int	main(void)
 	puts ("--- ft_bzero ----\n");
 	bzero ((str + 3), 5);
 	printf("bzero: %s\n", str);
-	bzero ((ftstr + 3), 5);
+	ft_bzero ((ftstr + 3), 5);
 	printf("ft_bzero: %s\n", ftstr);	
 	puts("");
 
