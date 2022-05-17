@@ -6,7 +6,7 @@
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 12:19:35 by maragao           #+#    #+#             */
-/*   Updated: 2022/05/08 02:02:50 by maragao          ###   ########.rio      */
+/*   Updated: 2022/05/17 16:14:47 by maragao          ###   ########.rio      */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,17 +83,17 @@ int	main(void)
 	puts("");
 
 	puts ("--- ft_strlcat ----\n");
-//	char	str3[20]	= "testando ";
+	char	str3[20]	= "testando ";
 	char    ft_str3[20]  = "testando ";
-//	printf("strcat: size => %lu / %s\n", (strlcat(str3, "strcat", 20)), str3);
+	printf("strcat: size => %lu / %s\n", (strlcat(str3, "strcat", 20)), str3);
 	printf("ft_strcat: size => %zu / %s\n", (ft_strlcat(ft_str3, "ft_strcat", 20)), ft_str3);
 	puts("");
 
 	puts ("--- ft_strlcpy ----\n");
-//	char	str4[20]	= "testando ";
+	char	str4[20]	= "testando ";
 	char    ft_str4[20]  = "testando ";
-//	printf("strcpy: size => %lu / %s\n", (strlcpy(str4, "strcpy", 20)), str4);
-	printf("ft_strcpy: size => %zu / %s\n", (ft_strlcpy(ft_str4, "ft_strcpy", 20)), ft_str4);
+	printf("strcpy: size => %lu / %s\n", (strlcpy(str4, "strcpy", 0)), str4);
+	printf("ft_strcpy: size => %zu / %s\n", (ft_strlcpy(ft_str4, "ft_strcpy", 0)), ft_str4);
 	puts("");
 
 
