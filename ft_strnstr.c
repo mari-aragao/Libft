@@ -6,9 +6,10 @@
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/12 02:26:39 by maragao           #+#    #+#             */
-/*   Updated: 2022/05/12 02:33:18 by maragao          ###   ########.rio      */
+/*   Updated: 2022/05/17 13:41:40 by maragao          ###   ########.rio      */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
 char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 {
@@ -22,8 +23,8 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 		while (s1[i + j] == s2[j] && (i + j) < n)
 		{
 			j++;
-			if s1[i + j] == s2[j]
-				return (s1 + i);
+			if (s1[i + j] == s2[j])
+				return (((char *) s1) + i);
 		}
 		i++;
 	}

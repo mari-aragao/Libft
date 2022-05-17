@@ -6,7 +6,7 @@
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 23:01:24 by maragao           #+#    #+#             */
-/*   Updated: 2022/05/05 12:39:53 by maragao          ###   ########.rio      */
+/*   Updated: 2022/05/17 14:07:11 by maragao          ###   ########.rio      */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strdup(const char *s)
 {
-	int	i;
+	int		i;
 	char	*ptr;
-	int	len;
+	int		len;
 
 	len = 0;
 	while (s[len])

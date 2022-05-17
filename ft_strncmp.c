@@ -6,9 +6,10 @@
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/12 01:52:17 by maragao           #+#    #+#             */
-/*   Updated: 2022/05/12 01:55:08 by maragao          ###   ########.rio      */
+/*   Updated: 2022/05/17 13:33:57 by maragao          ###   ########.rio      */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {

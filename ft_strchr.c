@@ -6,22 +6,22 @@
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 13:17:48 by maragao           #+#    #+#             */
-/*   Updated: 2022/05/12 01:46:49 by maragao          ###   ########.rio      */
+/*   Updated: 2022/05/17 14:06:27 by maragao          ###   ########.rio      */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strchr(const char *s, int c)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (s[i] != 0)
 	{
 		if (s[i] == (char) c)
-			return ((char *) (s + i));
+			return ((char *)(s + i));
 		i++;
 	}
 	if (s[i] == (char) c)
-		return ((char *) (s + i));
+		return ((char *)(s + i));
 	return (0);
 }

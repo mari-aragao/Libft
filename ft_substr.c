@@ -6,9 +6,10 @@
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/17 01:36:08 by maragao           #+#    #+#             */
-/*   Updated: 2022/05/17 02:15:26 by maragao          ###   ########.rio      */
+/*   Updated: 2022/05/17 13:42:02 by maragao          ###   ########.rio      */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
