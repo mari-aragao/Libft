@@ -6,7 +6,7 @@
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 12:24:38 by maragao           #+#    #+#             */
-/*   Updated: 2022/05/17 02:31:17 by maragao          ###   ########.rio      */
+/*   Updated: 2022/05/18 16:22:59 by maragao          ###   ########.rio      */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,6 @@ char	*ft_strdup(const char *s);
 void	*ft_calloc(size_t nmemb, size_t size);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strtrim(char const *s1, char const *set);
 
 #endif
