@@ -6,7 +6,7 @@
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 15:45:01 by maragao           #+#    #+#             */
-/*   Updated: 2022/05/18 16:33:05 by maragao          ###   ########.rio      */
+/*   Updated: 2022/05/19 13:07:14 by maragao          ###   ########.rio      */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 unsigned int	first_trim(char const *s1, char const *set)
 {
-	unsigned int i;
-	unsigned int j;
+	unsigned int	i;
+	unsigned int	j;
 
 	i = 0;
 	j = 0;
-	while (set[i])
+	while (set[i] && s1[i])
 	{
 		while (s1[j] == set[i])
 		{
@@ -33,8 +33,8 @@ unsigned int	first_trim(char const *s1, char const *set)
 
 size_t	last_trim(char const *s1, char const *set)
 {
-	size_t i;
-	size_t j;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
 	j = (ft_strlen(s1) - 1);
@@ -53,10 +53,19 @@ size_t	last_trim(char const *s1, char const *set)
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	char *ptr;
+	char	*ptr;
+	size_t	len;
 
-	ptr = ft_substr(s1, first_trim(s1, set), last_trim(s1, set));
+	if (!s1)
+		return (NULL);
+	len = last_trim(s1, set);
+	if (ft_strlen(s1) == (size_t) first_trim(s1, set))
+		return (ft_strdup(""));
+	if (!set)
+		return ((char *) s1);
+	ptr = (char *) malloc (len + 1);
 	if (!ptr)
 		return (NULL);
+	ptr = ft_substr(s1, first_trim(s1, set), len + 1);
 	return (ptr);
 }
