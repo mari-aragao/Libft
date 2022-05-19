@@ -6,7 +6,7 @@
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 12:19:35 by maragao           #+#    #+#             */
-/*   Updated: 2022/05/17 16:14:47 by maragao          ###   ########.rio      */
+/*   Updated: 2022/05/19 17:17:10 by maragao          ###   ########.rio      */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,7 +96,7 @@ int	main(void)
 	printf("ft_strcpy: size => %zu / %s\n", (ft_strlcpy(ft_str4, "ft_strcpy", 0)), ft_str4);
 	puts("");
 
-
+	puts ("--- ft_split ---\n");
+	printf("%s\n", ft_split(" ola ola ola ", ' ')[0]);
 	return (0);
 }
-

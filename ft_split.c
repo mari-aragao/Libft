@@ -6,7 +6,7 @@
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/19 00:30:49 by maragao           #+#    #+#             */
-/*   Updated: 2022/05/19 02:17:13 by maragao          ###   ########.rio      */
+/*   Updated: 2022/05/19 17:54:03 by maragao          ###   ########.rio      */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,68 +14,91 @@
 
 int		number_strings(const char *s, char c)
 {
-	int i;
-	int res;
+	int	i;
+	int	res;
 
 	i = 0;
 	res = 0;
-	if (s[0] == c)
-		i++;
-	while (s[i])
+	while (s[i] != 0)
 	{
-		if (s[i] == c && s[i + 1] != 0)
+		if (s[i] == c && s[i + 1] != c)
 			res++;
 		i++;
 	}
 	return (res + 1);
 }
 
-int		ft_substrlen(const char *s, char c)
+unsigned int	ft_allocstr(char **mat, const char *s, char c, int len_strs)
 {
+	int	i;
+	int	j;
 	int	len;
 
-	len = 0;
-	while (s[len] != 0 && s[len] != c)
-		len++;
-	return (len);
+	i = 0;
+	j = 0;
+	while (i < len_strs && s[j] != 0)
+	{
+		len = 0;
+		while (s[j] == c && s[j] != 0)
+			j++;
+		while (s[j] != 0 && s[j] != c)
+		{
+			len++;
+			j++;
+		}
+		mat[i] = (char *) malloc(len + 1 * sizeof(*mat[i]));
+		if (!mat[i])
+			return (0);
+		i++;
+	}
+	mat[i] = 0;
+	return (1);
 }
 
-void	position_next_sep(const char *s, char c, int *i)
+void	ft_namestr(char **mat, char *s, char c, int len_strs)
 {
-	while (s[*i] != 0 && s[*i] != c)
+	int	i;
+	int	j;
+	int	k;
+
+	(void)len_strs;
+	i = 0;
+	j = 0;
+	while (i < 3 && s[j])
+	{
+		k = 0;
+		while (s[j] == c && s[j])
+			j++;
+		while (s[j] != c && s[j])
+		{
+			mat[i][k] = s[j];
+			k++;
+			j++;
+		}
+		mat[i][k] = 0;
 		i++;
+	}
 }
 
 char	**ft_split(const char *s, char c)
 {
-	char	**str;
-	int		num_strs;
-	int		i;
-	int		size;
-	int		len_str;
+	char			**mat;
+	char			*str_trim;
+	char			c1[1];
+	int			len_strs;
 
-	num_strs = number_strings(s, c);
-	str = (char **) malloc(num_strs + 1 * sizeof(char *));
-	if (!str)
+	if (!s)
 		return (NULL);
-	i = 0;
-	len_str = 0;
-	size = 0;
-	while (size <= num_strs)
-	{
-		if (s[i] != c)
-		{
-			len_str = ft_substrlen(s, c);
-			*(str + size) = (char *) malloc (len_str + 1);
-			if (!*(str + size))
-				return (NULL);
-			*(str + size) = ft_substr(s, (unsigned int) i, len_str);
-			position_next_sep(s, c, &i);
-		}
-		if (s[i] == c && (i == 0 || i == (int) ft_strlen(s)))
-			size++;
-		i++;
-	}
-	*(str + size) = 0;
-	return (str);
+	c1[0] = c;
+	str_trim = ft_strtrim(s, c1);
+	if (!str_trim)
+		return (NULL);
+	len_strs = number_strings(str_trim, c);
+	mat = (char **) malloc(len_strs + 1 * sizeof(*mat));
+	if (!mat)
+		return (NULL);
+	ft_allocstr(mat, s, c, len_strs);
+	ft_namestr(mat, (char *)s, c, len_strs);
+	return (mat);
 }
+
