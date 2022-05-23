@@ -6,7 +6,7 @@
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 12:19:35 by maragao           #+#    #+#             */
-/*   Updated: 2022/05/19 17:17:10 by maragao          ###   ########.rio      */
+/*   Updated: 2022/05/23 18:17:39 by maragao          ###   ########.rio      */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,8 +85,8 @@ int	main(void)
 	puts ("--- ft_strlcat ----\n");
 	char	str3[20]	= "testando ";
 	char    ft_str3[20]  = "testando ";
-	printf("strcat: size => %lu / %s\n", (strlcat(str3, "strcat", 20)), str3);
-	printf("ft_strcat: size => %zu / %s\n", (ft_strlcat(ft_str3, "ft_strcat", 20)), ft_str3);
+	printf("strcat: size => %lu / %s\n", (strlcat(str3, "strcat", 0)), str3);
+	printf("ft_strcat: size => %zu / %s\n", (ft_strlcat(ft_str3, "strcat", 0)), ft_str3);
 	puts("");
 
 	puts ("--- ft_strlcpy ----\n");
@@ -96,7 +96,12 @@ int	main(void)
 	printf("ft_strcpy: size => %zu / %s\n", (ft_strlcpy(ft_str4, "ft_strcpy", 0)), ft_str4);
 	puts("");
 
-	puts ("--- ft_split ---\n");
-	printf("%s\n", ft_split(" ola ola ola ", ' ')[0]);
-	return (0);
+//	puts ("--- ft_split ---\n");
+//	printf("%s\n", ft_split("ia|this|for|me|", '|')[0]);
+//	return (0);
+
+	puts ("ft_split tey");
+
+		printf("Teste ft_split: %s\n\n", ft_split(" oi bb ", ' ')[0]);
+
 }
