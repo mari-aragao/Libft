@@ -6,11 +6,12 @@
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 17:12:40 by maragao           #+#    #+#             */
-/*   Updated: 2022/05/23 18:26:07 by maragao          ###   ########.rio      */
+/*   Updated: 2022/05/24 15:06:24 by maragao          ###   ########.rio      */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 size_t	ft_len_mat(char const *s, char c)
 {
@@ -21,40 +22,14 @@ size_t	ft_len_mat(char const *s, char c)
 	i = 0;
 	while (s[i])
 	{
-		if (s[i] == c && s[i + 1] != c)
+		if (s[i] == c && s[i + 1] != c && s[i + 1] != 0)
 			len++;
 		i++;
 	}
-	return (len + 1);
+	return (len);
 }
 
 unsigned int	ft_alloc(char **mat, char const *s, char c, size_t len_mat)
-{
-	size_t	i;
-	size_t	j;
-	size_t	len;
-
-	i = 0;
-	j = 0;
-	while (s[i] && j < len_mat)
-	{
-		len = 0;
-		while (s[i] == c && s[i])
-			i++;
-		while(s[i] != c && s[i])
-		{
-			len++;
-			i++;
-		}
-		mat[j] = (char *) malloc(len + 1 * sizeof(char));
-		if (!mat[j])
-			return (1);
-		j++;
-	}
-	return (0);
-}
-
-void	ft_name(char **mat, char *s, char c, size_t len_mat)
 {
 	size_t	i;
 	size_t	j;
@@ -62,34 +37,67 @@ void	ft_name(char **mat, char *s, char c, size_t len_mat)
 
 	i = 0;
 	j = 0;
-	while (s[i] && j < len_mat)
+	while (s[j] && i < len_mat)
 	{
 		k = 0;
-		while (s[i] == c && s[i])
-			i++;
-		while (s[i] != c && s[i])
+		while (s[j] == c && s[j])
+			j++;
+		while(s[j] != c && s[j])
 		{
-			mat[j][k] = s[i];
-			i++;
+			k++;
+			j++;
+		}
+		mat[i] = (char *)malloc(sizeof(*mat[i]) * (k + 1));
+		if (!mat[i])
+			return (1);
+		i++;
+	}
+	mat[i] = NULL;
+	return (0);
+}
+
+void	ft_name(char **mat, char const *s, char c, size_t len_mat)
+{
+	size_t	i;
+	size_t	j;
+	size_t	k;
+
+	i = 0;
+	j = 0;
+	while (i < len_mat && s[j])
+	{
+		k = 0;
+		while (s[j] == c && s[j])
+			j++;
+		while (s[j] != c && s[j])
+		{
+			mat[i][k] = s[j];
+			j++;
 			k++;
 		}
-		mat[j][k] = '\0';
-		j++;
+		mat[i][k] = '\0';
+		i++;
 	}
-//	mat[j][0] = 0;
 }
 
 char	**ft_split(char const *s, char c)
 {
-	char **mat;
-	size_t	len_mat;
-	char	c1[1];
+	char		*str;
+	char		**mat;
+	size_t		len_mat;
+	char		c1[1];
 	unsigned int	error;
 
-	len_mat = 0;
+	if (!s)
+		return (NULL);
 	c1[0] = c;
-	len_mat = (ft_len_mat(ft_strtrim(s, c1), c));
-	mat = (char **) malloc (len_mat + 1);
+	if(!c1[0])
+		c = 0;
+	str = ft_strtrim(s, c1);
+	if(!str)
+		return (NULL);
+	len_mat = ft_len_mat(str, c) + 1;
+	mat = (char **)malloc(sizeof(*mat) * (len_mat + 1));
 	if (!mat)
 		return (NULL);
 	error = ft_alloc(mat, s, c, len_mat);
@@ -98,6 +106,7 @@ char	**ft_split(char const *s, char c)
 		free (mat);
 		return (NULL);
 	}
-	ft_name(mat, (char *)s, c, len_mat);
+	ft_name(mat, s, c, len_mat);
 	return (mat);
 }
+

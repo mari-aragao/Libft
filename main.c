@@ -6,7 +6,7 @@
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 12:19:35 by maragao           #+#    #+#             */
-/*   Updated: 2022/05/23 18:17:39 by maragao          ###   ########.rio      */
+/*   Updated: 2022/05/24 15:01:15 by maragao          ###   ########.rio      */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,7 +101,6 @@ int	main(void)
 //	return (0);
 
 	puts ("ft_split tey");
-
-		printf("Teste ft_split: %s\n\n", ft_split(" oi bb ", ' ')[0]);
+	printf("Teste ft_split: %s\n\n", ft_split(" oi  ", ' ')[0]);
 
 }
