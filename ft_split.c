@@ -6,7 +6,7 @@
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 17:12:40 by maragao           #+#    #+#             */
-/*   Updated: 2022/05/24 16:18:37 by maragao          ###   ########.rio      */
+/*   Updated: 2022/05/24 16:24:58 by maragao          ###   ########.rio      */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,13 @@ static size_t	ft_len_mat(char const *s, char c)
 	return (len);
 }
 
+static unsigned int	ft_error(char **mat, size_t i)
+{
+	while (--i >= 0)
+		free(mat[i]);
+	return (1);
+}
+
 static unsigned int	ft_alloc(char **mat, char const *s, char c, size_t len_mat)
 {
 	size_t	i;
@@ -49,7 +56,7 @@ static unsigned int	ft_alloc(char **mat, char const *s, char c, size_t len_mat)
 		}
 		mat[i] = (char *)malloc(sizeof(char) * (k + 1));
 		if (!mat[i])
-			return (1);
+			return (ft_error(mat, i));
 		i++;
 	}
 	mat[i] = 0;
