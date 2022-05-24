@@ -6,7 +6,7 @@
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 14:15:31 by maragao           #+#    #+#             */
-/*   Updated: 2022/05/23 14:18:54 by maragao          ###   ########.rio      */
+/*   Updated: 2022/05/24 16:16:33 by maragao          ###   ########.rio      */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	if (!s)

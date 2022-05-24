@@ -6,15 +6,15 @@
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 14:19:20 by maragao           #+#    #+#             */
-/*   Updated: 2022/05/23 14:22:20 by maragao          ###   ########.rio      */
+/*   Updated: 2022/05/24 16:15:08 by maragao          ###   ########.rio      */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putendl_fd(char *s, int fd)
+void	ft_putendl_fd(char *s, int fd)
 {
-	int i;
+	int	i;
 
 	if (!s)
 		return ;

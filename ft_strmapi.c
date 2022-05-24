@@ -6,7 +6,7 @@
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/20 13:52:25 by maragao           #+#    #+#             */
-/*   Updated: 2022/05/23 13:59:05 by maragao          ###   ########.rio      */
+/*   Updated: 2022/05/24 16:19:04 by maragao          ###   ########.rio      */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	ptr[i] = 0;
 	return (ptr);
 }
-
-
