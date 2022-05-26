@@ -6,7 +6,7 @@
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 00:28:32 by maragao           #+#    #+#             */
-/*   Updated: 2022/05/26 00:46:34 by maragao          ###   ########.rio      */
+/*   Updated: 2022/05/26 13:18:56 by maragao          ###   ########.rio      */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,5 @@
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	new -> next = *lst;
-	*lst = new;:w
+	*lst = new;
 }

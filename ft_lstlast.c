@@ -6,7 +6,7 @@
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 00:52:10 by maragao           #+#    #+#             */
-/*   Updated: 2022/05/26 01:00:14 by maragao          ###   ########.rio      */
+/*   Updated: 2022/05/26 13:25:44 by maragao          ###   ########.rio      */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,17 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
-	while (lst -> next != 0)
-		lst -> lst = next;
+	t_list *ptr;
+	int i;
+
+	ptr = lst;
+	i = 0;
+	while (ptr)
+	{
+		ptr = ptr -> next;
+		i++;
+	}
+	while (--i, i > 0)
+		lst = lst -> next;
 	return (lst);
 }
