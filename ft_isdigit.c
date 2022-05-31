@@ -6,11 +6,9 @@
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 20:51:46 by maragao           #+#    #+#             */
-/*   Updated: 2022/05/04 21:23:10 by maragao          ###   ########.rio      */
+/*   Updated: 2022/05/30 15:54:43 by maragao          ###   ########.rio      */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_isdigit(int c)
 {

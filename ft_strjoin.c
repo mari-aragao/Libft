@@ -6,9 +6,10 @@
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/17 02:20:56 by maragao           #+#    #+#             */
-/*   Updated: 2022/05/23 14:43:11 by maragao          ###   ########.rio      */
+/*   Updated: 2022/05/30 16:02:06 by maragao          ###   ########.rio      */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)

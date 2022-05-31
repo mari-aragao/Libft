@@ -6,7 +6,7 @@
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 14:22:40 by maragao           #+#    #+#             */
-/*   Updated: 2022/05/27 16:34:44 by maragao          ###   ########.rio      */
+/*   Updated: 2022/05/31 16:52:57 by maragao          ###   ########.rio      */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,7 @@ void	ft_putnbr_fd(int n, int fd)
 		n = n * -1;
 	}
 	if (n > 9)
-	{
 		ft_putnbr_fd(n / 10, fd);
-	}
 	res = n % 10 + '0';
 	write (fd, &res, 1);
 }

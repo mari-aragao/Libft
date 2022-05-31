@@ -6,7 +6,7 @@
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/17 01:12:01 by maragao           #+#    #+#             */
-/*   Updated: 2022/05/27 13:59:24 by maragao          ###   ########.rio      */
+/*   Updated: 2022/05/31 16:11:06 by maragao          ###   ########.rio      */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	void	*ptr;
 	size_t	tot_size;
 
-	if (!nmemb || !size)
-		return (NULL);
 	tot_size = nmemb * size;
 	ptr = (void *) malloc (tot_size);
 	if (!ptr)

@@ -6,11 +6,9 @@
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 21:57:15 by maragao           #+#    #+#             */
-/*   Updated: 2022/05/04 22:01:39 by maragao          ###   ########.rio      */
+/*   Updated: 2022/05/30 15:55:25 by maragao          ###   ########.rio      */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_isascii(int c)
 {

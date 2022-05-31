@@ -6,11 +6,9 @@
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/08 01:46:44 by maragao           #+#    #+#             */
-/*   Updated: 2022/05/08 02:00:29 by maragao          ###   ########.rio      */
+/*   Updated: 2022/05/30 15:58:26 by maragao          ###   ########.rio      */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_toupper(int c)
 {

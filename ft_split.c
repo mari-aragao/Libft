@@ -6,25 +6,29 @@
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 17:12:40 by maragao           #+#    #+#             */
-/*   Updated: 2022/05/24 16:24:58 by maragao          ###   ########.rio      */
+/*   Updated: 2022/05/31 13:04:16 by maragao          ###   ########.rio      */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static size_t	ft_len_mat(char const *s, char c)
 {
 	size_t	len;
-	size_t	i;
+	size_t	w_found;
 
 	len = 0;
-	i = 0;
-	while (s[i])
+	w_found = 0;
+	while (*s)
 	{
-		if (s[i] == c && s[i + 1] != c && s[i + 1] != 0)
+		if (*s != c && w_found == 0)
+		{
 			len++;
-		i++;
+			w_found = 1;
+		}
+		if (*s == c)
+			w_found = 0;
+		s++;
 	}
 	return (len);
 }
@@ -59,7 +63,7 @@ static unsigned int	ft_alloc(char **mat, char const *s, char c, size_t len_mat)
 			return (ft_error(mat, i));
 		i++;
 	}
-	mat[i] = 0;
+	mat[i] = NULL;
 	return (0);
 }
 
@@ -89,19 +93,13 @@ static void	ft_name(char **mat, char const *s, char c, size_t len_mat)
 
 char	**ft_split(char const *s, char c)
 {
-	char			*str;
 	char			**mat;
 	size_t			len_mat;
-	char			c1[1];
 	unsigned int	error;
 
 	if (!s)
 		return (NULL);
-	c1[0] = c;
-	str = ft_strtrim(s, c1);
-	if (!str)
-		return (NULL);
-	len_mat = ft_len_mat(str, c) + 1;
+	len_mat = ft_len_mat(s, c);
 	mat = (char **)malloc(sizeof(char *) * (len_mat + 1));
 	if (!mat)
 		return (NULL);

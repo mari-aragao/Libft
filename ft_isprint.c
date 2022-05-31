@@ -6,11 +6,9 @@
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 00:14:27 by maragao           #+#    #+#             */
-/*   Updated: 2022/05/05 00:18:25 by maragao          ###   ########.rio      */
+/*   Updated: 2022/05/30 15:55:42 by maragao          ###   ########.rio      */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_isprint(int c)
 {

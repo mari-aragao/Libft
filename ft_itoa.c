@@ -6,11 +6,11 @@
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/20 12:46:10 by maragao           #+#    #+#             */
-/*   Updated: 2022/05/20 13:49:41 by maragao          ###   ########.rio      */
+/*   Updated: 2022/05/30 16:04:04 by maragao          ###   ########.rio      */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
-#include <stdio.h>
 
 static int	size_str(int n)
 {

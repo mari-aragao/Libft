@@ -6,7 +6,7 @@
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 14:19:20 by maragao           #+#    #+#             */
-/*   Updated: 2022/05/24 16:15:08 by maragao          ###   ########.rio      */
+/*   Updated: 2022/05/30 16:06:39 by maragao          ###   ########.rio      */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,6 @@ void	ft_putendl_fd(char *s, int fd)
 		return ;
 	i = 0;
 	while (s[i])
-	{
 		write (fd, &s[i++], 1);
-	}
 	write (fd, "\n", 1);
 }

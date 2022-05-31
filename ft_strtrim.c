@@ -6,13 +6,13 @@
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 15:45:01 by maragao           #+#    #+#             */
-/*   Updated: 2022/05/27 16:31:39 by maragao          ###   ########.rio      */
+/*   Updated: 2022/05/30 17:10:59 by maragao          ###   ########.rio      */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned int	first_trim(char const *s1, char const *set)
+static unsigned int	first_trim(char const *s1, char const *set)
 {
 	unsigned int	i;
 	unsigned int	j;
@@ -31,7 +31,7 @@ unsigned int	first_trim(char const *s1, char const *set)
 	return (j);
 }
 
-size_t	last_trim(char const *s1, char const *set)
+static size_t	last_trim(char const *s1, char const *set)
 {
 	size_t	i;
 	size_t	j;
@@ -56,6 +56,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*ptr;
 	size_t	len;
 
+	if (!s1)
+		return (NULL);
 	if (!(*s1))
 		return (ft_strdup(""));
 	len = last_trim(s1, set);
